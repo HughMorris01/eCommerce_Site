@@ -13,6 +13,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -709,5 +710,106 @@ html {
 }
 /* End of Watch Button */
 /* End of Section 4 */
+
+/* Section 5 */
+.section-5 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* Section 5 Content */
+.airpods {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    position: relative;
+}
+/* End of Section 5 Content */
+
+/* Section 5 Heading */
+.section-5-heading {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15rem;
+    font-weight: 300;
+    letter-spacing: .3rem;
+    color: var(--white-color);
+    text-shadow: .2rem .2rem 0 #999;
+}
+/* End of Section 5 Heading */
+
+/* Section 5 Images */
+.airpods img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: 10rem;
+}
+
+.airpods-img-2 {
+    background-color: var(--primary-color);
+}
+/* End of Section 5 Images */
+
+/* Section 5 Buttons */
+.airpods-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5rem;
+}
+
+.airpods-btn {
+    width: 15rem;
+    height: 4rem;
+    background-color: var(--primary-color);
+    border: none;
+    margin: 0 2rem;
+    border-radius: .5rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.airpods-btn:last-child {
+    background-color: var(--white-color);
+    color: var(--primary-color)
+}
+/* End of Section 5 Buttons */
+/* End of Section 5 */
+
+/* Section 6 */
+.section-6 {
+    width: 100%;
+    height: 25vh;
+    position: relative;
+}
+
+/* Section 6 Icons */
+.section-6-icons {
+    display: flex;
+}
+/* End of Section 6 Icons */
+
+/* Section 6 Images */
+.icon-link img {
+    height: 5rem;
+    width: 5rem;
+    margin: 2rem 5rem 0;
+}
+/* End of Section 6 Images */
+
+.section-6 p {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+}
+/* End of Section 6 */
 
 
