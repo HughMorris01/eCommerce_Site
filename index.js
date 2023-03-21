@@ -1,3 +1,11 @@
+// Common JS
+document.querySelectorAll('.watch-control, .controls a').forEach(control=>{
+    control.addEventListener('click', e =>{
+        e.preventDefault();
+    })
+})
+// End of Common JS
+
 // Cube
 let x = 0;
 let y = 20;
@@ -99,3 +107,68 @@ window.addEventListener('scroll', ()=>{
     }
 })
 // End of Section 3
+
+// Section 4
+const watchBands = document.querySelector('.watch-bands')
+const watchCases = document.querySelector('.watch-cases')
+
+const watchTopControl = document.querySelector('.watch-top-control')
+const watchRightControl = document.querySelector('.watch-right-control')
+const watchBottomControl = document.querySelector('.watch-bottom-control')
+const watchLeftControl = document.querySelector('.watch-left-control')
+
+let axisY = 0
+let axisX = 0
+
+const hideControl = ()=>{
+    if(axisY === -240) {
+        watchTopControl.classList.add('hide-control')
+    } else {
+        watchTopControl.classList.remove('hide-control')
+    }
+    if(axisY === 240) {
+        watchBottomControl.classList.add('hide-control')
+    } else {
+        watchBottomControl.classList.remove('hide-control')
+    }
+    if(axisX === -240) {
+        watchRightControl.classList.add('hide-control')
+    } else {
+        watchRightControl.classList.remove('hide-control')
+    }
+    if(axisX === 240) {
+        watchLeftControl.classList.add('hide-control')
+    } else {
+        watchLeftControl.classList.remove('hide-control')
+    }
+}
+
+watchTopControl.addEventListener('click', ()=>{
+    if(axisY > -240) {
+        watchCases.style.marginTop = `${axisY -= 60}rem`
+    }
+    hideControl()
+})
+
+watchRightControl.addEventListener('click', ()=>{
+    if(axisX > -240) {
+        watchBands.style.marginRight = `${axisX -= 60}rem`
+    }
+    hideControl()
+})
+
+watchBottomControl.addEventListener('click', ()=>{
+    if(axisY < 240) {
+        watchCases.style.marginTop= `${axisY += 60}rem`
+    }
+    hideControl()
+})
+
+watchLeftControl.addEventListener('click', ()=>{
+    if(axisX < 240) {
+        watchBands.style.marginRight = `${axisX += 60}rem` 
+    }
+    hideControl()
+})
+
+// End of Section 4
